@@ -1,6 +1,6 @@
 import {  useEffect,useState } from "react"
 
-function Formulario({insertar,actualizar,datosEditar,setDatosEditar}){
+function Formulario({insertar,actualizar,datosEditar,setDatosEditar}: any ){
 
     const [nombre,setNombre] = useState(datosEditar?.nombre??"")
     const [descripcion,setDescripcion] = useState(datosEditar?.descripcion??"")
@@ -24,7 +24,7 @@ function Formulario({insertar,actualizar,datosEditar,setDatosEditar}){
     }
    },[datosEditar])
 
-    const manejarSubmit = (e) =>{
+    const manejarSubmit = (e: any) =>{
         e.preventDefault()
         if (nombre === ""){
             alert("El nombre es obligatorio")

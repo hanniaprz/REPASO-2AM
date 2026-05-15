@@ -11,7 +11,7 @@ function App(){
   const [busqueda,setBusqueda]=useState("")
   const [tipoFiltro,setTipoFiltro]=useState("todas")
   
-  const medicamentosFiltrados=medicamentos
+  const medicamentosFiltrados : any[] =medicamentos
   .filter(m=>tipoFiltro==="todas"||m.tipo===tipoFiltro)
   .filter(m=>m.nombre.toLowerCase().includes(busqueda.toLowerCase())) 
 

@@ -2,7 +2,7 @@ import {useEffect,useState} from "react"
 import { supabase } from "../utils/supabase"
 
 function useFarmacia(){
-    const [medicamentos,setMedicamentos]=useState([])
+    const [medicamentos,setMedicamentos]=useState<any[]>([])
 
     const traer=async()=>{
         const {data}=await supabase.from("medicamentos").select("*")
